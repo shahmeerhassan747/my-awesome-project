@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Recommendations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .recipe {
+            border: 1px solid #ddd;
+            background-color: white;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .recipe h2 {
+            font-size: 24px;
+            color: #333;
+        }
+        .recipe img {
+            max-width: 200px;
+            max-height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .recipe p {
+            font-size: 16px;
+            color: #666;
+            margin: 10px 0;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+        .back-link a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Recipe Recommendations</h1>
+    </header>
+
+    <div class="container">
+        {% if recipes %}
+            <h2>Here are some recipe recommendations for you:</h2>
+            {% for recipe in recipes %}
+                <div class="recipe">
+                    <h2>{{ recipe.name }}</h2>
+                    <img src="{{ recipe.image_url }}" alt="{{ recipe.name }}">
+                    <p><strong>Ingredients:</strong> {{ recipe.ingredients }}</p>
+                    <p><strong>Rating:</strong> {{ recipe.rating }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No recommendations available. Please try again later.</p>
+        {% endif %}
+    </div>
+
+    <div class="back-link">
+        <a href="/">Go back to the main page</a>
+    </div>
+</body>
+</html>
