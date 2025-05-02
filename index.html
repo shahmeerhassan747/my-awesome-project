@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Recommendations</title>
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head> 
+<style>
+ 
+</style>
+<body>
+  
+    <div class="container">
+        <h1 class="mt-5 text-center">Recipe Recommendation System</h1>
+        <div class="form-container">
+            <form method="post" class="mt-4">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="calories">calories</label>
+                        <input type="number" class="form-control" id="calories" name="calories" step="any" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="fat">fat</label>
+                        <input type="number" class="form-control" id="fat" name="fat" step="any" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="carbohydrates">carbohydrates</label>
+                        <input type="number" class="form-control" id="carbohydrates" name="carbohydrates" step="any" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="cholesterol">cholesterol</label>
+                        <input type="number" class="form-control" id="cholesterol" name="cholesterol" step="any" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="protein">protein</label>
+                        <input type="number" class="form-control" id="protein" name="protein" step="any" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="sodium">sodium</label>
+                        <input type="number" class="form-control" id="sodium" name="sodium" step="any" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="fiber">fiber</label>
+                        <input type="number" class="form-control" id="fiber" name="fiber" step="any" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="ingredients">ingredients</label>
+                        <input type="text" class="form-control" id="ingredients" name="ingredients" step="any" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-danger">Get Recommendations</button>
+
+
+            </form>
+        </div>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
